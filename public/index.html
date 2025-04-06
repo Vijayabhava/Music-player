@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#1db954" />
+    <meta
+      name="description"
+      content="Random Song Generator built with React"
+    />
+    <title>Random Song Generator</title>
+  </head>
+  <body>
+    <div id="preloader">
+      <div class="equalizer">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- Your content ends here -->
+
+    <script>
+      window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
+        // Wait 2.5 seconds before starting fade out
+        setTimeout(() => {
+          preloader.style.opacity = "0";
+          preloader.style.transition = "opacity 0.8s ease";
+          // Then remove it after fade out
+          setTimeout(() => preloader.style.display = "none", 800);
+        }, 2500); // <- Change this value to make it stay longer (milliseconds)
+      });
+    </script>
+    
+
+</body>
+</html>
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
